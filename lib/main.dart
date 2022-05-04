@@ -26,9 +26,9 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Hola Mundo"),
+          title: const Text("Hola Mundo"),
         ),
-        body: new DescriptionPlace(),
+        body: const DescriptionPlace(),
       )
     );
   }
