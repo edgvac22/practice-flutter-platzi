@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget {
-  const DescriptionPlace(namePlace, stars, descriptionPlace, {Key? key}) : super(key: key);
+  DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace, {Key? key}) : super(key: key);
 
-  get descriptionPlace => null;
-
-  get namePlace => null;
-
-  get stars => null;
+    String namePlace;
+    int stars;
+    String descriptionPlace;
 
   @override
   Widget build(BuildContext context) {
@@ -36,14 +34,6 @@ class DescriptionPlace extends StatelessWidget {
       ),
     );
 
-    String namePlace;
-    int stars;
-    String descriptionPlace;
-
-    DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace);
-
-    String descriptionDummy = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
-
     final star = Container (
       margin: const EdgeInsets.only(
         top: 323.0,
@@ -62,8 +52,9 @@ class DescriptionPlace extends StatelessWidget {
         right: 20.0
       ),
       child: Text(
-        descriptionDummy,
+        descriptionPlace,
         style: const TextStyle(
+          fontFamily: "Lato",
           fontSize: 16.0,
           fontWeight: FontWeight.bold,
           ),
@@ -78,9 +69,10 @@ class DescriptionPlace extends StatelessWidget {
             left: 20.0,
             right: 20.0
           ),
-          child: const Text(
-            "Duwili Ella",
-            style: TextStyle(
+          child:  Text(
+            namePlace,
+            style: const TextStyle(
+              fontFamily: "Lato",
               fontSize: 30.0,
               fontWeight: FontWeight.w900
             ),
@@ -96,10 +88,8 @@ class DescriptionPlace extends StatelessWidget {
             starBorder
           ],
         )
-
       ],
     );
-
     return Column(
       children: <Widget>[
         titleStars,
