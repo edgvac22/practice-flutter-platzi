@@ -1,12 +1,46 @@
 import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget {
-  const DescriptionPlace({Key? key}) : super(key: key);
+  const DescriptionPlace(namePlace, stars, descriptionPlace, {Key? key}) : super(key: key);
+
+  get descriptionPlace => null;
+
+  get namePlace => null;
+
+  get stars => null;
 
   @override
   Widget build(BuildContext context) {
     // ignore: todo
     // TODO: implement build
+
+    final starHalf = Container (
+      margin: const EdgeInsets.only(
+        top: 323.0,
+        right: 3.0
+      ),
+      child: const Icon(
+        Icons.star_half,
+        color: Color(0xFFf2C611),
+      ),
+    );
+
+    final starBorder = Container (
+      margin: const EdgeInsets.only(
+        top: 323.0,
+        right: 3.0
+      ),
+      child: const Icon(
+        Icons.star_border,
+        color: Color(0xFFf2C611),
+      ),
+    );
+
+    String namePlace;
+    int stars;
+    String descriptionPlace;
+
+    DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace);
 
     String descriptionDummy = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
 
@@ -58,8 +92,8 @@ class DescriptionPlace extends StatelessWidget {
             star,
             star,
             star,
-            star,
-            star
+            starHalf,
+            starBorder
           ],
         )
 
@@ -73,5 +107,4 @@ class DescriptionPlace extends StatelessWidget {
       ],
     );
   }
-  
 }
