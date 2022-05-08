@@ -18,7 +18,7 @@ class Review extends StatelessWidget {
         left: 20.0
       ),
       child: Text(
-        details,
+        comment,
         textAlign: TextAlign.left,
         style: const TextStyle(
           fontFamily: "Lato",
@@ -86,7 +86,7 @@ class Review extends StatelessWidget {
     return Row(
       children: <Widget>[
         photo,
-        userComment
+        userDetails
       ],
     );
   }
