@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CardImage extends StatelessWidget {
-  String pathImage = "assets/img/beach.jpeg";
-  CardImage(pathImage, {Key? key}) : super(key: key);
+  String pathImage = "assets/img/river.jpeg";
+  CardImage(this.pathImage, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +14,13 @@ class CardImage extends StatelessWidget {
       width: 250.0,
       margin: const EdgeInsets.only(
         top: 80.0,
+        bottom: 30.0,
         left: 20.0
       ),
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage(pathImage)
+            image: AssetImage(pathImage)
         ),
         borderRadius: const BorderRadius.all(Radius.circular(10.0)),
         shape: BoxShape.rectangle,
